@@ -107,7 +107,7 @@ Zoologico();*/
 
 // Ejercicio #3
 // Funcion
-function SueldoTrabajadores(){
+/*function SueldoTrabajadores(){
 // Ingreso de datos
 NumTrabajadores = parseInt(prompt("Ingrese el numero de trabajadores"));
 // Condicionales
@@ -124,4 +124,37 @@ if(HorasTrabajadas <= 40){
 }
 }
 }
-SueldoTrabajadores();
+SueldoTrabajadores();*/
+
+
+// Ejercicio #4
+//Funcion
+function EdadesdeUnGrupo(){
+// Ingreso de datos
+NumeroMujeres = prompt("Ingrese el numero total de mujeres");
+NumeroHombres = prompt("Ingrese el numero total de hombres");
+// Acumuladores
+AcumuladorHombre = 0;
+AcumuladorMujer = 0;
+for (i=1;i<=NumeroHombres;i++){
+    EdadHombres = parseInt(prompt("Ingrese la edad del hombre"));
+    AcumuladorHombre = AcumuladorHombre + EdadHombres;
+}  
+// Promedio Numero de hombres
+var PromedioH = AcumuladorHombre / NumeroHombres;
+var PromedioRH = PromedioH.toFixed(2);
+// For y condicionales
+for(i=1;i<=NumeroMujeres;i++){
+    EdadMujeres = parseInt(prompt("Ingrese la edad del mujeres"));
+    AcumuladorMujer = AcumuladorMujer + EdadMujeres;
+}
+// Promedio Numero de mujeres
+PromedioM = (AcumuladorMujer / NumeroMujeres);
+var PromedioRM = PromedioM.toFixed(2);
+// Promedio de todo el grupo
+PromedioG = ((AcumuladorMujer+AcumuladorHombre) / (NumeroHombres + NumeroMujeres) );
+var PromedioRG = PromedioH.toFixed(2);
+// Mensaje de resultado
+alert("El promedio de edades de los hombres es: "+PromedioRH+" mujeres: "+PromedioRM+ " Promedio de todo el grupo: "+PromedioRG);
+}
+EdadesdeUnGrupo();
