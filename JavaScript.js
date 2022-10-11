@@ -323,7 +323,7 @@ Comisiones();*/
 
 // Ejercicio #10
 // Funcion 
-function CantidadVotos() {
+/*function CantidadVotos() {
 // Ingreso de datos y variables
 NumeroVotos1 = parseInt(prompt("Ingrese  el numero de votos del primer candidato"));
 NumeroVotos2 = parseInt(prompt("Ingrese  el numero de votos del segundo candidato"));
@@ -390,4 +390,41 @@ if((NumeroVotos1 == NumeroVotos2)){
 }
 }
 // Llamado al metodo
-CantidadVotos();
+CantidadVotos();*/
+
+
+// Ejercicio 11
+// Funcion
+function NumerosPrimosIntervalo(){
+    // Ingreso de datos 
+Inicio = parseInt(prompt("Ingrese el numero inicial del rango"));
+Final = parseInt(prompt("Ingrese el numero final del rango"));
+    // Acumuladores y variables
+    Suma = 0;
+    Producto = 1;
+    NumDatos = 0;
+    // Condicionales y ciclo for
+    if(Inicio != Final){
+       if(Inicio < Final){
+        for(let i= Inicio; i<= Final; i++){
+            Suma = Suma + i;
+            Producto = Producto * i;
+            NumDatos = NumDatos + 1;
+        }
+       }else if(Inicio > Final){
+        for(let i= Final; i<= Inicio; i++){
+            Suma = Suma + i;
+            Producto = Producto * i;
+            NumDatos = NumDatos + 1;
+        }    
+}
+}else{
+    alert("El rango tiene mismo numero inicial y final");
+}
+// Mendaje de respuesta
+alert("La sumatoria de los numeros es: "+Suma);
+alert("El producto de los numeros es: "+Producto);
+alert("El promedio de los numeros es " + (Suma / NumDatos));
+}
+// Llamado al metodo
+NumerosPrimosIntervalo();
