@@ -433,7 +433,7 @@ NumerosPrimosIntervalo();*/
 
 // Ejercicio 12
 // Funcion
-function NumerosEnterosDigitos(){
+/*function NumerosEnterosDigitos(){
 // Variables
 Par = 0;
 Impar = 0;
@@ -458,4 +458,32 @@ alert("El numero de digitos es de: "+Numero.length);
 alert("Numeros pares: "+Par+" y Numeros Impares: "+Impar);
 alert("Sumatoria:  "+Suma+" Producto "+Producto+" Promedio: "+Promedio);
 }
-NumerosEnterosDigitos(); 
+NumerosEnterosDigitos(); */
+
+
+
+// Ejercicio 13
+// Funcion
+function SerieFibonacci(){
+//Ingreso de datos
+Num = parseInt(prompt("Ingrese limite de la serie"));
+// Vector y contadores
+	 VecSerie = [0,1];
+     Pares = 0;
+     Impares = 0;
+//Ciclo for y condicionales
+	for(let j = 2; j <= Num; j++){
+		VecSerie.push(VecSerie[j-1] + VecSerie[j-2]);
+		alert("La serie es: "+VecSerie[j]);	
+
+        if(VecSerie[j] % 2 == 0){
+            Pares = Pares + 1;
+        }else if(VecSerie[j] % 2 != 0){
+            Impares = Impares + 1;
+        }
+	}
+//Mensaje de respuesta
+    alert ("Numero de pares: "+Pares+" Numero de impares: "+Impares);
+}
+//Llamado a la funcion
+SerieFibonacci();
