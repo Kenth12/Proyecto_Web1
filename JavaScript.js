@@ -129,7 +129,7 @@ SueldoTrabajadores();*/
 
 // Ejercicio #4
 //Funcion
-function EdadesdeUnGrupo(){
+/*function EdadesdeUnGrupo(){
 // Ingreso de datos
 NumeroMujeres = prompt("Ingrese el numero total de mujeres");
 NumeroHombres = prompt("Ingrese el numero total de hombres");
@@ -157,4 +157,27 @@ var PromedioRG = PromedioH.toFixed(2);
 // Mensaje de resultado
 alert("El promedio de edades de los hombres es: "+PromedioRH+" mujeres: "+PromedioRM+ " Promedio de todo el grupo: "+PromedioRG);
 }
-EdadesdeUnGrupo();
+EdadesdeUnGrupo();*/
+
+
+// Ejercicio #5
+// Funcion
+function CojuntoDeNdatos(){
+// Ingreso de datos
+NumTotal = parseInt(prompt("Ingrese el numero total del conjunto de datos"));
+// Contadores y variables
+Auxiliar = true;
+// For y condicionales
+for (i=1; i<=NumTotal;i++){
+    Numeros = parseInt(prompt("Ingrese numero"));
+    if(Auxiliar == true){
+        NumeroMenor = Numeros;
+        Auxiliar = false;
+    }else if(Numeros < NumeroMenor){
+        NumeroMenor = Numeros;
+    }
+}
+// Mensaje de resultado
+alert("El numero menor es : "+NumeroMenor); 
+}
+CojuntoDeNdatos();
