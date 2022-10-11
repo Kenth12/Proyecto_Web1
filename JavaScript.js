@@ -33,7 +33,7 @@ CarrosCiudad();*/
 
 // Ejercicio #2
 // Funcion
-function Zoologico(){
+/*function Zoologico(){
 // Mensaje de Ingreso de datos
 NombreAnimal = prompt("Ingrese nombre del animal");
 // Contadores y variables
@@ -102,4 +102,26 @@ if(NombreAnimal == "chompances"){
     alert("Ese nombre no existe, escriba chompances");
 }
 }
-Zoologico();
+Zoologico();*/
+
+
+// Ejercicio #3
+// Funcion
+function SueldoTrabajadores(){
+// Ingreso de datos
+NumTrabajadores = parseInt(prompt("Ingrese el numero de trabajadores"));
+// Condicionales
+for (let i = 1; i <= NumTrabajadores; i++) {
+HorasTrabajadas = parseInt(prompt("Ingrese el numero de horas trabajadas en la semana"));
+if(HorasTrabajadas <= 40){
+    Salario = (HorasTrabajadas * 20);
+    alert("Por las horas trabajadas de: "+HorasTrabajadas+" Tendra un pago de: $"+Salario);
+}else if(HorasTrabajadas > 40){
+    HorasExtra = (HorasTrabajadas - 40) * 25;
+    Salario = (HorasExtra + (40 * 20) );
+    // Mensaje de resultado
+    alert("Por las horas trabajadas de: "+HorasTrabajadas+" Tendra un pago de: $"+Salario);
+}
+}
+}
+SueldoTrabajadores();
