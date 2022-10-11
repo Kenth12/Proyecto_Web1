@@ -491,7 +491,7 @@ SerieFibonacci();*/
 
 // Ejercicio 14
 // Funcion
-function MaximoComoUnDivisor(){
+/*function MaximoComoUnDivisor(){
     // Ingreso de datos
         Numero1 = parseInt(prompt("Ingrese un numero uno"));
         Numero2 = parseInt(prompt("Ingrese un numero dos"));
@@ -546,4 +546,33 @@ function MaximoComoUnDivisor(){
         alert("El maximo como un multipo de "+Numero1+" y "+Numero2+" es de: "+Var);
     }
     // Llamado al metodo
-    MaximoComoUnDivisor();
+    MaximoComoUnDivisor();*/
+
+
+    // Ejercicio 15
+    // Funcion
+function TasaDePoblacion(){
+    // Variables Y acomuladores
+    PaisA = 25.000;
+    PaisB = 19.900;
+    Auxiliar = true;
+    Año = 1994;
+    // Ciclo while Y condicionales
+    while(Auxiliar == true){
+        TasasA = (25 * 0.02);
+        TasasB = (19.9 * 0.03);
+        if(PaisB > PaisA ){
+            // Mensajes de respuesta
+            alert("El pais B supera al pais A en el año: "+Año);
+            alert("Pais B cuenta con una poblacion de: "+PaisB.toFixed(2)+" Millones");
+            alert("Pais A cuenta con una poblacion de: "+PaisA.toFixed(2)+" Millones");
+            Auxiliar  = false;
+        }else{
+            PaisA = PaisA + TasasA;
+            PaisB = PaisB + TasasB;
+            Año = Año + 1;
+        }
+    }
+}
+// Llamado a la funcion
+TasaDePoblacion();    
