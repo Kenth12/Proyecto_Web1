@@ -464,7 +464,7 @@ NumerosEnterosDigitos(); */
 
 // Ejercicio 13
 // Funcion
-function SerieFibonacci(){
+/*function SerieFibonacci(){
 //Ingreso de datos
 Num = parseInt(prompt("Ingrese limite de la serie"));
 // Vector y contadores
@@ -486,4 +486,64 @@ Num = parseInt(prompt("Ingrese limite de la serie"));
     alert ("Numero de pares: "+Pares+" Numero de impares: "+Impares);
 }
 //Llamado a la funcion
-SerieFibonacci();
+SerieFibonacci();*/
+
+
+// Ejercicio 14
+// Funcion
+function MaximoComoUnDivisor(){
+    // Ingreso de datos
+        Numero1 = parseInt(prompt("Ingrese un numero uno"));
+        Numero2 = parseInt(prompt("Ingrese un numero dos"));
+        // Vectores y Contaadores
+        Vec = [];
+        Vec2 = [];
+        Vec3 = [];
+        Contador = 0;
+        Contador2 = 0;
+        Contador3 = 0;
+        // Ciclo for
+        for (let i = 1; i <= Numero1; i++){
+            if((Numero1 % i) == 0){
+                Vec[Contador] = i;
+                Contador = Contador + 1;
+            }
+        }
+        for (let i = 1; i <= Numero2; i++){
+            if((Numero2 % i) == 0){
+                Vec2[Contador2] = i;
+                Contador2 = Contador2 + 1;
+            }
+        }
+        // Mensaje respuesta
+        alert("Los multiplos de "+Numero1+" son: "+Vec.toString());
+        alert("Los multiplos de "+Numero2+" son: "+Vec2.toString());
+        // Ciclo for Y condicionales
+        if((Vec.length > Vec2.length) ){
+            for (let i = 0; i <= Vec.length; i++){
+                for (let j = 0; j <= Vec.length; j++) {        
+                if((Vec[i] === Vec2[j]) & (Vec[i] != null ) & (Vec2[j] != null )){
+                    Vec3[Contador3] = Vec[i];
+                    Contador3 += 1;
+                    Var = Vec3.pop();
+                }
+            }
+                
+            }
+        }else{
+            for (let i = 0; i <= Vec2.length; i++){
+                for (let j = 0; j <= Vec2.length; j++) {        
+                if((Vec[i] === Vec2[j]) & (Vec[i] != null ) & (Vec2[j] != null )){
+                    Vec3[Contador3] = Vec[i];
+                    Contador3 += 1;
+                    Var = Vec3.pop();
+                }
+            }
+                
+            }
+        }
+        // Mendaje respuesta
+        alert("El maximo como un multipo de "+Numero1+" y "+Numero2+" es de: "+Var);
+    }
+    // Llamado al metodo
+    MaximoComoUnDivisor();
