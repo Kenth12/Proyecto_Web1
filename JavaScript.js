@@ -162,7 +162,7 @@ EdadesdeUnGrupo();*/
 
 // Ejercicio #5
 // Funcion
-function CojuntoDeNdatos(){
+/*function CojuntoDeNdatos(){
 // Ingreso de datos
 NumTotal = parseInt(prompt("Ingrese el numero total del conjunto de datos"));
 // Contadores y variables
@@ -180,4 +180,32 @@ for (i=1; i<=NumTotal;i++){
 // Mensaje de resultado
 alert("El numero menor es : "+NumeroMenor); 
 }
-CojuntoDeNdatos();
+CojuntoDeNdatos();*/
+
+
+// Ejercicio #6
+// Funcion
+function PesoPorPersonas(){
+// Acumuladores y variables
+NumeroPersonas = 5;
+AcumuladorPeso = 0;
+// For y condicionales
+for(i=1;i<=NumeroPersonas;i++){
+    for(j=1;j<=10;j++){
+        //Ingreso de datos
+       PesoBasculas = parseInt(prompt("Ingrese el peso de la bascula: "+j));
+       AcumuladorPeso = AcumuladorPeso + PesoBasculas;
+    }
+    PesoAnterio = parseInt(prompt("Ingrese el promedio del mes pasado"));
+    PromedioPeso = (AcumuladorPeso / 10).toFixed(2);
+    PesoTotal = PromedioPeso - PesoAnterio;
+    if(PromedioPeso > PesoAnterio){
+        // Mensaje de Respuesta
+        alert("Subio de peso "+PesoTotal+" Kg");
+    }else if(PromedioPeso < PesoAnterio){
+        // Mensaje de Respuesta
+        alert("Bajo de peso "+PesoTotal+" Kg");
+    }
+}
+}
+PesoPorPersonas();
