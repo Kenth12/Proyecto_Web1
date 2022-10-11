@@ -185,7 +185,7 @@ CojuntoDeNdatos();*/
 
 // Ejercicio #6
 // Funcion
-function PesoPorPersonas(){
+/*function PesoPorPersonas(){
 // Acumuladores y variables
 NumeroPersonas = 5;
 AcumuladorPeso = 0;
@@ -208,4 +208,24 @@ for(i=1;i<=NumeroPersonas;i++){
     }
 }
 }
-PesoPorPersonas();
+PesoPorPersonas();*/
+
+
+// Ejercicio #7
+// Funcion 
+function TotalDeCompras(){
+// Acumuladores y variables
+Acumulador = 0;
+i=0;
+// Ciclo while y condicionales
+while (i==0){
+    var Precio = prompt("Ingrese precio del producto");
+    var Cantidad = prompt("Ingrese cantidad del producto");
+    Producto = (Precio * Cantidad);
+    Acumulador = (Acumulador + Producto);
+    i = prompt("Ingrese 1 si ya no llevara mas productos o ingrese 0 si desea continuar");
+}
+// Mensaje de resultado
+alert("El total a pagar por la compra es de: $"+Acumulador);
+}
+TotalDeCompras();
