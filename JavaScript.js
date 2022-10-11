@@ -280,7 +280,7 @@ PrecioYdescuentos();*/
 
 // Ejercicio #9
 // Funcion y Ingreso de datos
-function Comisiones(){
+/*function Comisiones(){
 // Acumulador
 Acumulador = 0;
 // Ciclo For y condicionales
@@ -317,4 +317,77 @@ for (let i = 1; i <= 100;i++) {
 alert("El total de ventas de la empresa fue: $"+Acumulador+" Millones");
 }
 // Llamado a la funcion
-Comisiones();
+Comisiones();*/
+
+
+
+// Ejercicio #10
+// Funcion 
+function CantidadVotos() {
+// Ingreso de datos y variables
+NumeroVotos1 = parseInt(prompt("Ingrese  el numero de votos del primer candidato"));
+NumeroVotos2 = parseInt(prompt("Ingrese  el numero de votos del segundo candidato"));
+NumeroVotos3 = parseInt(prompt("Ingrese  el numero de votos del tercer candidato"));
+// Condicionales
+if((NumeroVotos1 == NumeroVotos2) & (NumeroVotos1 == NumeroVotos3) & (NumeroVotos2 == NumeroVotos3)){
+    Sumatoria = NumeroVotos1 + NumeroVotos2 + NumeroVotos3;
+    Restantes = 50000 - Sumatoria ;
+    alert("Los 3 candidatos tuvieron la misma votacion con un total de: "+Sumatoria);  
+    if(Sumatoria == 50000){
+        alert("Votaron todos los esperados");
+    }else if(Sumatoria > 50000){
+        alert("Votaron mas de los esperados");
+    }else if(Sumatoria < 50000){
+        alert("Faltaron: "+Restantes+ " Votos");
+    }
+
+}else if((NumeroVotos1 > NumeroVotos2) && (NumeroVotos1 > NumeroVotos3)){
+    Sumatoria = NumeroVotos1 + NumeroVotos2 + NumeroVotos3;
+    Restantes = 50000 - Sumatoria ;
+    alert("El candidato ganador fue el 1 con un total de: "+NumeroVotos1);
+    alert("Entre los 3 sumaron un total de: "+Sumatoria+" votos");
+    if(Sumatoria == 50000){
+        alert("Votaron todos los esperados");
+    }else if(Sumatoria > 50000){
+        alert("Votaron mas de los esperados");
+    }else if(Sumatoria < 50000){
+        alert("Faltaron: "+Restantes+ " Votos");
+    }
+
+}else if((NumeroVotos2 > NumeroVotos1) && (NumeroVotos2 > NumeroVotos3)){
+    Sumatoria = NumeroVotos1 + NumeroVotos2 + NumeroVotos3;
+    Restantes = 50000 - Sumatoria ;
+    alert("El candidato ganador fue el 2 con un total de: "+NumeroVotos2);
+    alert("Entre los 3 sumaron un total de: "+Sumatoria+" votos");
+    if(Sumatoria == 50000){
+        alert("Votaron todos los esperados");
+    }else if(Sumatoria > 50000){
+        alert("Votaron mas de los esperados");
+    }else if(Sumatoria < 50000){
+        alert("Faltaron: "+Restantes+ " Votos");
+    }
+
+}else if((NumeroVotos3 > NumeroVotos1) && (NumeroVotos3 > NumeroVotos1)){
+    Sumatoria = NumeroVotos1 + NumeroVotos2 + NumeroVotos3;
+    Restantes = 50000 - Sumatoria ;
+    alert("El candidato ganador fue el 3 con un total de: "+NumeroVotos3);
+    alert("Entre los 3 sumaron un total de: "+Sumatoria+" votos");
+    if(Sumatoria == 50000){
+        alert("Votaron todos los esperados");
+    }else if(Sumatoria > 50000){
+        alert("Votaron mas de los esperados");
+    }else if(Sumatoria < 50000){
+        alert("Faltaron: "+Restantes+ " Votos");
+    }
+}
+
+if((NumeroVotos1 == NumeroVotos2)){
+    alert("Existio un empate entre el candidato 1 y el 2 ambos con "+NumeroVotos1+ " Votos");
+}else if(NumeroVotos2 == NumeroVotos3){
+    alert("Existio un empate entre el candidato 2 y el 3 ambos con "+NumeroVotos3+ " Votos");
+}else if(NumeroVotos1 == NumeroVotos3){
+    alert("Existio un empate entre el candidato 1 y el 3 ambos con "+NumeroVotos3+ " Votos");
+}
+}
+// Llamado al metodo
+CantidadVotos();
