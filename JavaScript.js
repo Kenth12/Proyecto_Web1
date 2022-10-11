@@ -213,7 +213,7 @@ PesoPorPersonas();*/
 
 // Ejercicio #7
 // Funcion 
-function TotalDeCompras(){
+/*function TotalDeCompras(){
 // Acumuladores y variables
 Acumulador = 0;
 i=0;
@@ -228,4 +228,51 @@ while (i==0){
 // Mensaje de resultado
 alert("El total a pagar por la compra es de: $"+Acumulador);
 }
-TotalDeCompras();
+TotalDeCompras();*/
+
+
+// Ejercicio #8
+// Funcion
+function PrecioYdescuentos(){
+// Ingreso de datos
+PrecioUnico = parseInt(prompt("Ingrese el precio unico de cada asiento"));
+CantidaPersonas = parseInt(prompt("Ingrese la cantidad de personas en la funcion"));
+//Acumuladores
+Acumulador = 0;
+// Ciclo for y Condicionales
+for (let i=1;i <= CantidaPersonas;i++){
+    EdadPersonas = parseInt(prompt("Ingrese la edad de la personas en la funcion"));
+    if((EdadPersonas > 5) & (EdadPersonas <= 14)){
+        Pagos = (PrecioUnico * CantidaPersonas);
+        Descuento = (Pagos * 0.35);
+        Acumulador = Acumulador + Descuento;
+
+    }else if((EdadPersonas > 14) & (EdadPersonas <= 19)){
+        Pagos = (PrecioUnico * CantidaPersonas);
+        Descuento = (Pagos * 0.25);
+        Acumulador = Acumulador + Descuento;
+
+    }else if((EdadPersonas > 19) & (EdadPersonas < 46)){
+        Pagos = (PrecioUnico * CantidaPersonas);
+        Descuento = (Pagos * 0.1);
+        Acumulador = Acumulador + Descuento;
+
+    }else if((EdadPersonas > 45) & (EdadPersonas <= 64)){
+        Pagos = (PrecioUnico * CantidaPersonas);
+        Descuento = (Pagos * 0.25);
+        Acumulador = Acumulador + Descuento;
+
+    }else if((EdadPersonas > 65)){
+        Pagos = (PrecioUnico * CantidaPersonas);
+        Descuento = (Pagos * 0.35);
+        Acumulador = Acumulador + Descuento;
+
+    }else if(EdadPersonas < 6){
+        alert("El niño no puede entrar al teatro");
+
+    }
+}
+//Mensaje de resultado
+alert("En descuentos el teatro pierde aproximadamente: $"+Acumulador+ " En descuentos");
+}
+PrecioYdescuentos();
