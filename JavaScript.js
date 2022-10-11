@@ -233,7 +233,7 @@ TotalDeCompras();*/
 
 // Ejercicio #8
 // Funcion
-function PrecioYdescuentos(){
+/*function PrecioYdescuentos(){
 // Ingreso de datos
 PrecioUnico = parseInt(prompt("Ingrese el precio unico de cada asiento"));
 CantidaPersonas = parseInt(prompt("Ingrese la cantidad de personas en la funcion"));
@@ -275,4 +275,46 @@ for (let i=1;i <= CantidaPersonas;i++){
 //Mensaje de resultado
 alert("En descuentos el teatro pierde aproximadamente: $"+Acumulador+ " En descuentos");
 }
-PrecioYdescuentos();
+PrecioYdescuentos();*/
+
+
+// Ejercicio #9
+// Funcion y Ingreso de datos
+function Comisiones(){
+// Acumulador
+Acumulador = 0;
+// Ciclo For y condicionales
+for (let i = 1; i <= 100;i++) {
+    Ventas = parseInt(prompt("Ingrese total de millones generados"));
+    
+    if((Ventas <= 20)){
+        Acumulador = Acumulador + Ventas;
+        PersonaComision = (Ventas * 0.1);
+        alert("Esta persona tendra una comision del 10% es decir de: $"+PersonaComision);
+    
+    }else if((Ventas > 20 ) & (Ventas < 40)){
+        Acumulador = Acumulador + Ventas;
+        PersonaComision = (Ventas * 0.15);
+        alert("Esta persona tendra una comision del 15% es decir de: $"+PersonaComision);
+    
+    }else if((Ventas >= 40 ) & (Ventas < 80)){
+        Acumulador = Acumulador + Ventas;
+        PersonaComision = (Ventas * 0.2);
+        alert("Esta persona tendra una comision del 20% es decir de: $"+PersonaComision);
+    
+    }else if((Ventas >= 80) & (Ventas < 160)){
+        Acumulador = Acumulador + Ventas;
+        PersonaComision = (Ventas * 0.25);
+        alert("Esta persona tendra una comision del 25% es decir de: $"+PersonaComision);
+    
+    }else if(Ventas >= 160){
+        Acumulador = Acumulador + Ventas;
+        PersonaComision = (Ventas * 0.30);
+        alert("Esta persona tendra una comision del 30% es decir de: $"+PersonaComision);
+    }        
+}
+// Mensaje respuesta 
+alert("El total de ventas de la empresa fue: $"+Acumulador+" Millones");
+}
+// Llamado a la funcion
+Comisiones();
